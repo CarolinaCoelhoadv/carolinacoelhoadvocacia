@@ -1,0 +1,373 @@
+:root{
+  --bg: #070707;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.74);
+  --line: rgba(255,255,255,0.10);
+
+  /* dourado/marrom */
+  --gold: #C6A15B;
+
+  /* WhatsApp */
+  --wa: #25D366;
+  --wa-dark: #1AAE55;
+
+  --radius: 18px;
+  --shadow: 0 18px 45px rgba(0,0,0,0.55);
+  --max: 1120px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue";
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(198,161,91,0.20), transparent 60%),
+              radial-gradient(1000px 600px at 80% 20%, rgba(198,161,91,0.10), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 19px; /* ↑ maior e confortável */
+}
+
+a{ color: inherit; text-decoration: none; }
+.container{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* HEADER */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.62);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 18px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.brand-badge{
+  background: #0b0b0b; /* destaca a logo e reduz o “branco” em volta */
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 12px 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.50);
+  margin: 0 auto;
+}
+
+/* LOGO EM DESTAQUE */
+.brand-logo{
+  display: block;
+  height: 96px;  /* ↑ bem maior */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav a{
+  padding: 10px 10px;
+  color: rgba(255,255,255,0.84);
+  border-radius: 10px;
+  transition: 0.2s ease;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nav a:hover{
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+/* HERO */
+.hero{
+  padding: 34px 0 18px;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.pill{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--line);
+  color: rgba(255,255,255,0.86);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+h1{
+  margin: 14px 0 10px;
+  font-size: clamp(36px, 3.8vw, 56px); /* ↑ maior */
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.accent{ color: var(--gold); }
+
+.lead{
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 20px; /* ↑ maior */
+}
+
+.cta-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0 14px;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+.btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.09); }
+.btn:active{ transform: translateY(0); }
+
+.btn-wa{
+  background: linear-gradient(180deg, var(--wa), var(--wa-dark));
+  border-color: rgba(0,0,0,0.15);
+  color: #061a10;
+}
+
+.btn-ghost{
+  background: transparent;
+  border-color: rgba(255,255,255,0.14);
+}
+
+.btn-wa-lg{
+  padding: 16px 20px;
+  font-size: 19px;
+}
+
+.hero-notes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.chip{
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
+  color: rgba(255,255,255,0.80);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* CARDS */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 18px 18px;
+  box-shadow: var(--shadow);
+}
+
+.card-title{
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.list{
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255,255,255,0.86);
+  font-size: 18px;
+}
+
+.list li{ margin: 10px 0; }
+
+/* SEÇÕES */
+.section{
+  padding: 26px 0;
+}
+
+.section-title{
+  margin: 0 0 8px;
+  font-size: 32px; /* ↑ maior */
+  font-weight: 950;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle{
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tile{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius);
+  padding: 16px 16px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.40);
+}
+
+.tile-title{
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 950;
+  color: var(--gold);
+}
+
+.tile p{
+  margin: 0;
+  color: rgba(255,255,255,0.84);
+  font-size: 18px;
+}
+
+/* ABOUT */
+.about{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+}
+
+.about-text{
+  margin: 0;
+  color: rgba(255,255,255,0.88);
+  font-size: 20px;
+}
+
+/* CONTACT */
+.contact-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+}
+
+.contact-title{
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.contact-text{
+  margin: 0;
+  color: rgba(255,255,255,0.82);
+  font-size: 18px;
+}
+
+/* FOOTER */
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 18px 0 26px;
+  background: rgba(0,0,0,0.50);
+}
+
+.footer-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-brand{
+  font-weight: 950;
+  letter-spacing: 0.01em;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-meta{
+  color: rgba(255,255,255,0.78);
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.footer-disclaimer{
+  color: rgba(255,255,255,0.62);
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* WhatsApp flutuante (bem visível) */
+.wa-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  padding: 16px 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--wa), var(--wa-dark));
+  color: #061a10;
+  font-weight: 950;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 16px 38px rgba(0,0,0,0.55);
+  font-size: 18px;
+}
+
+.wa-float:hover{ filter: brightness(1.03); }
+
+/* RESPONSIVO */
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; }
+  .nav{ display: none; } /* se quiser manter menu no mobile, eu ajusto */
+  .brand-logo{ height: 92px; }
+  body{ font-size: 19px; }
+}
