@@ -1,149 +1,205 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Carolina Coelho Sociedade Individual de Advocacia</title>
-  <meta name="description" content="Advocacia em Direito Civil, Família e Fundiário, com atuação também em Direito do Trabalho e Previdenciário." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Advocacia em Direito Civil, Família e Fundiário/Imobiliário, com atuação também em Direito do Trabalho e Previdenciário. Atendimento por agendamento via WhatsApp." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a id="topo"></a>
-
   <!-- TOPO: somente logo -->
-  <header class="topbar" aria-label="Topo">
-    <div class="topbar-inner">
-      <img class="brand-logo" src="./assets/logo.png" alt="Carolina Coelho Sociedade Individual de Advocacia" />
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-left">
-        <p class="pill">Atendimento objetivo • Estratégia clara • Segurança jurídica</p>
-
-        <h1 class="hero-title">
-          Advocacia em Direito Civil, Família e Fundiário
-        </h1>
-
-        <p class="hero-subtitle">
-          Orientação prática e atuação firme para conduzir seu caso com clareza, previsibilidade e eficiência.
-          Suporte também em Direito do Trabalho e Previdenciário.
-        </p>
-
-        <!-- CTA (MEIO): WhatsApp em verde -->
-        <div class="cta-row">
-          <a class="btn btn-whatsapp" href="https://wa.me/556130468238" target="_blank" rel="noopener">
-            Agende pelo WhatsApp
-          </a>
-        </div>
-
-        <div class="meta-row">
-          <span class="chip">Atendimento mediante agendamento</span>
-          <span class="chip">Atuação nacional (online) / presencial (se aplicável)</span>
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-badge" aria-label="Logotipo do escritório">
+          <img src="assets/logo.png" alt="Carolina Coelho - Sociedade Individual de Advocacia" class="brand-logo" />
         </div>
       </div>
 
-      <aside class="hero-right">
-        <div class="card">
-          <h2 class="card-title">Atuação</h2>
-          <ul class="bullets">
-            <li><strong>Família:</strong> divórcio, guarda, alimentos, partilha, medidas urgentes.</li>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#atuacao">Atuação</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-            <li><strong>Civil:</strong> contratos, cobranças, indenizações, responsabilidade civil, fraude bancária,
-              desbloqueio de conta bancária com atuação em medidas de urgência e proteção patrimonial, e
-              atuação administrativa e judicial junto ao <strong>DETRAN</strong>.
-            </li>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="pill">Atendimento objetivo • Estratégia clara • Segurança jurídica</div>
 
-            <li><strong>Fundiário / Imobiliário:</strong> posse, regularização, cessão de direitos, propriedade e estratégias
-              administrativas/judiciais; atuação na esfera administrativa junto à <strong>TERRACAP</strong>, <strong>CODHAB</strong> e <strong>SEDET</strong>.
-            </li>
+          <h1>
+            Advocacia em <span class="accent">Direito Civil</span>, <span class="accent">Família</span> e
+            <span class="accent">Fundiário/Imobiliário</span>
+          </h1>
 
-            <li><strong>Trabalho:</strong> ações trabalhistas, contestações e consultivo; atuação tanto para <strong>empregado</strong> quanto para <strong>empregador</strong>.</li>
+          <p class="lead">
+            Orientação prática e atuação firme para conduzir seu caso com clareza, previsibilidade e eficiência.
+            Suporte também em <strong>Direito do Trabalho</strong> e <strong>Direito Previdenciário</strong>.
+          </p>
 
-            <li><strong>Previdenciário:</strong> benefícios, revisões e atuação junto ao INSS, conforme o caso.</li>
-          </ul>
+          <!-- WhatsApp (MEIO) -->
+          <div class="cta-row">
+            <a class="btn btn-wa" href="https://wa.me/556130468238?text=Ol%C3%A1%21%20Quero%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+              Agendar pelo WhatsApp
+            </a>
+
+            <a class="btn btn-ghost" href="#atuacao">Ver áreas de atuação</a>
+          </div>
+
+          <div class="hero-notes">
+            <span class="chip">Atendimento mediante agendamento</span>
+            <span class="chip">Atuação nacional (online) / presencial (se aplicável)</span>
+          </div>
         </div>
-      </aside>
+
+        <aside class="hero-right" aria-label="Resumo de atuação">
+          <div class="card">
+            <h2 class="card-title">Atuação</h2>
+            <ul class="list">
+              <li><strong>Família:</strong> divórcio, guarda, alimentos, partilha e medidas urgentes.</li>
+
+              <li>
+                <strong>Civil:</strong> contratos, cobranças, indenizações, responsabilidade civil,
+                <strong>fraudes bancárias</strong>, <strong>reivindicações em plano de saúde</strong> e
+                <strong>desbloqueio de conta bancária</strong> (medidas de urgência e proteção patrimonial).
+              </li>
+
+              <li>
+                <strong>Fundiário/Imobiliário:</strong> posse, regularização, cessão de direitos, propriedade e
+                estratégia administrativa/judicial, com atuação junto à
+                <strong>TERRACAP</strong>, <strong>CODHAB</strong> e <strong>SEDET</strong>.
+              </li>
+
+              <li>
+                <strong>Trabalho:</strong> ações trabalhistas, contestações e atuação consultiva,
+                com suporte tanto para <strong>empregado</strong> quanto para <strong>empregador</strong>.
+              </li>
+
+              <li><strong>Previdenciário:</strong> benefícios, revisões e atuação junto ao INSS, conforme o caso.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <!-- AREAS -->
-    <section id="atuacao" class="section">
-      <h2 class="section-title">Áreas de atuação</h2>
-      <p class="section-subtitle">Foco em demandas estratégicas, com comunicação clara e direcionamento prático.</p>
+    <!-- ÁREAS -->
+    <section class="section" id="atuacao">
+      <div class="container">
+        <h2 class="section-title">Áreas de atuação</h2>
+        <p class="section-subtitle">
+          Foco em demandas estratégicas, com comunicação clara e direcionamento prático.
+        </p>
 
-      <div class="grid">
-        <article class="mini-card">
-          <h3 class="mini-title">Direito de Família</h3>
-          <p class="mini-text">Divórcio, guarda, alimentos, partilha, pactos e tutelas de urgência.</p>
-        </article>
+        <div class="grid">
+          <article class="tile">
+            <h3 class="tile-title">Direito de Família</h3>
+            <p>Divórcio, guarda, alimentos, partilha, pactos e tutelas de urgência.</p>
+          </article>
 
-        <article class="mini-card">
-          <h3 class="mini-title">Direito Civil</h3>
-          <p class="mini-text">Contratos, cobranças, indenizações, fraude bancária e desbloqueio de conta bancária com medidas de urgência e proteção patrimonial. Atuação administrativa e judicial junto ao DETRAN.</p>
-        </article>
+          <article class="tile">
+            <h3 class="tile-title">Direito Civil</h3>
+            <p>
+              Contratos, cobranças, indenizações, responsabilidade civil, fraudes bancárias,
+              reivindicações em plano de saúde e desbloqueio de conta bancária com medidas de urgência
+              e proteção patrimonial.
+            </p>
+          </article>
 
-        <article class="mini-card">
-          <h3 class="mini-title">Direito Fundiário / Imobiliário</h3>
-          <p class="mini-text">Posse, regularização, cessão de direitos e propriedade. Atuação administrativa junto à TERRACAP, CODHAB e SEDET.</p>
-        </article>
+          <article class="tile">
+            <h3 class="tile-title">Direito Fundiário / Imobiliário</h3>
+            <p>
+              Posse, regularização, cessão de direitos, propriedade e estratégia administrativa/judicial,
+              com atuação junto à TERRACAP, CODHAB e SEDET.
+            </p>
+          </article>
 
-        <article class="mini-card">
-          <h3 class="mini-title">Direito do Trabalho</h3>
-          <p class="mini-text">Ações trabalhistas, contestações e consultivo, com atuação para empregado e empregador.</p>
-        </article>
+          <article class="tile">
+            <h3 class="tile-title">Direito do Trabalho</h3>
+            <p>
+              Ações trabalhistas, contestações e atuação consultiva, com suporte ao empregado e ao empregador.
+            </p>
+          </article>
 
-        <article class="mini-card">
-          <h3 class="mini-title">Direito Previdenciário</h3>
-          <p class="mini-text">Benefícios, revisões e orientação estratégica junto ao INSS.</p>
-        </article>
+          <article class="tile">
+            <h3 class="tile-title">Direito Previdenciário</h3>
+            <p>Benefícios, revisões e atuação junto ao INSS, conforme o caso.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- SOBRE -->
-    <section id="sobre" class="section">
-      <h2 class="section-title">Sobre</h2>
-      <div class="panel">
-        <p>
-          Atuação com foco em clareza, estratégia e segurança jurídica. Atendimento objetivo e responsável, com
-          comunicação direta sobre riscos, prazos e possibilidades do caso.
-        </p>
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre</h2>
+
+        <div class="about">
+          <p class="about-text">
+            Advogada com 13 anos de experiência, com atuação estratégica em Direito Civil, formada pela
+            Universidade Católica de Brasília (UCB), com especialização concluída em Advocacia Extrajudicial,
+            Direito Civil e Processo Civil.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- CONTATO (SEM E-MAIL) -->
-    <section id="contato" class="section">
-      <h2 class="section-title">Contato</h2>
-      <div class="panel contact">
-        <p class="contact-text">
-          Atendimento mediante agendamento. Clique para conversar e agendar pelo WhatsApp:
+    <!-- CONTATO (sem e-mail) -->
+    <section class="section" id="contato">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="section-subtitle">
+          Atendimento mediante agendamento. Clique para iniciar a conversa no WhatsApp.
         </p>
 
-        <!-- CTA (FINAL): WhatsApp em verde -->
-        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/556130468238" target="_blank" rel="noopener">
-          Agende pelo WhatsApp
-        </a>
+        <div class="contact-card">
+          <div class="contact-left">
+            <h3 class="contact-title">Agendamento</h3>
+            <p class="contact-text">
+              Para solicitar atendimento e enviar informações iniciais do seu caso, utilize o WhatsApp.
+            </p>
+          </div>
+
+          <div class="contact-right">
+            <a class="btn btn-wa btn-wa-lg" href="https://wa.me/556130468238?text=Ol%C3%A1%21%20Quero%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+              Agendar pelo WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- BOTAO FLUTUANTE: WhatsApp em verde -->
-  <a class="wa-float" href="https://wa.me/556130468238" target="_blank" rel="noopener" aria-label="Agende pelo WhatsApp">
-    WhatsApp
-  </a>
-
+  <!-- RODAPÉ -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p class="footer-title">CAROLINA COELHO SOCIEDADE INDIVIDUAL DE ADVOCACIA</p>
-      <p class="footer-sub">
-        CNPJ nº 46.536.814/0001-46 • Registro Conselho Seccional nº OAB/DF 694122
-      </p>
+      <div>
+        <div class="footer-brand">CAROLINA COELHO SOCIEDADE INDIVIDUAL DE ADVOCACIA</div>
+        <div class="footer-meta">
+          CNPJ nº <strong>46.536.814/0001-46</strong> • Registro Conselho Seccional nº <strong>OAB/DF 694122</strong>
+        </div>
+        <div class="footer-disclaimer">
+          Site informativo, nos termos do Estatuto e do Código de Ética da OAB.
+        </div>
+      </div>
+
+      <!-- WhatsApp (FINAL) -->
+      <div class="footer-cta">
+        <a class="btn btn-wa" href="https://wa.me/556130468238?text=Ol%C3%A1%21%20Quero%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+      </div>
     </div>
   </footer>
+
+  <!-- WhatsApp flutuante (MAIOR) -->
+  <a class="wa-float" href="https://wa.me/556130468238?text=Ol%C3%A1%21%20Quero%20agendar%20um%20atendimento." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+    WhatsApp
+  </a>
 </body>
 </html>
