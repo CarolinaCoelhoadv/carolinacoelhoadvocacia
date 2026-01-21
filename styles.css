@@ -1,0 +1,263 @@
+/* ===========================
+   TIPOGRAFIA + PALETA PREMIUM
+   Inspirado no print (dourado/escuro + branco)
+   =========================== */
+
+/* Import de fontes (Google Fonts) */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root{
+  --bg: #070707;
+  --bg2: #0b0b0b;
+  --text: #f2f2f2;
+  --muted: rgba(242,242,242,.75);
+
+  /* Dourado “premium” (sem laranja estourado) */
+  --gold-1: #f2d7a3;
+  --gold-2: #d6b26a;
+  --gold-3: #b98c39;
+
+  /* WhatsApp */
+  --wa: #25D366;
+  --wa-dark: #1ea955;
+
+  --card: rgba(255,255,255,.06);
+  --stroke: rgba(255,255,255,.12);
+  --shadow: 0 18px 55px rgba(0,0,0,.55);
+}
+
+/* Base */
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1000px 520px at 80% 15%, rgba(214,178,106,.18), transparent 60%),
+    radial-gradient(900px 520px at 15% 55%, rgba(255,255,255,.06), transparent 55%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container centralizado de verdade */
+.container{
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* Cabeçalho com logo grande e central */
+.header{
+  padding: 28px 0 14px;
+  text-align: center;
+}
+
+.logo{
+  width: min(520px, 88vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+  filter: drop-shadow(0 14px 30px rgba(0,0,0,.55));
+}
+
+/* Selo/linha curta abaixo da logo */
+.header-badges{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.badge{
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+/* Título “estilo print”: serifado + dourado em pontos chave */
+.hero{
+  padding: 22px 0 10px;
+  text-align: left;
+}
+
+.kicker{
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.hero-title{
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 800;
+  letter-spacing: .3px;
+  line-height: 1.06;
+  margin: 0 0 12px;
+  font-size: clamp(34px, 4.4vw, 56px);
+}
+
+.hero-title .gold{
+  color: var(--gold-1);
+  text-shadow: 0 10px 28px rgba(0,0,0,.55);
+}
+
+.hero-sub{
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* Botão WhatsApp – SEMPRE verde */
+.cta-row{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 14px 0 10px;
+}
+
+.btn-wa{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #06210f;
+  background: linear-gradient(180deg, var(--wa), var(--wa-dark));
+  box-shadow: 0 16px 38px rgba(37,211,102,.25);
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.btn-wa:hover{
+  transform: translateY(-1px);
+}
+
+.btn-secondary{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--stroke);
+  font-weight: 600;
+}
+
+/* Cards (caixotes) com espaçamento elegante */
+.section{
+  padding: 22px 0;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px 18px 14px;
+}
+
+/* Título de seção em dourado (como no print) */
+.section-title{
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: .4px;
+  margin: 0 0 10px;
+  color: var(--gold-2);
+  font-size: 26px;
+}
+
+/* Lista com respiro (pra não ficar “grudado”) */
+.card ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.card li{
+  margin: 10px 0;          /* <<< espaçamento entre itens */
+  line-height: 1.55;       /* <<< leitura confortável */
+  color: var(--text);
+}
+
+/* “Tarjas” (labels) para Direito Civil / Família / etc. */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 980px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.area-box{
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.42);
+}
+
+.area-tag{
+  background: linear-gradient(90deg, rgba(214,178,106,.95), rgba(185,140,57,.85));
+  color: #120c05;
+  font-weight: 800;
+  font-family: "Playfair Display", Georgia, serif;
+  padding: 10px 14px;
+  letter-spacing: .3px;
+}
+
+.area-content{
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+/* WhatsApp flutuante – verde (mantém) */
+.wa-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  background: linear-gradient(180deg, var(--wa), var(--wa-dark));
+  color: #06210f;
+  border-radius: 999px;
+  padding: 12px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 18px 45px rgba(37,211,102,.22);
+}
+
+.wa-float span{
+  color: #06210f;
+}
+
+/* Rodapé enxuto */
+.footer{
+  padding: 26px 0 40px;
+  color: rgba(242,242,242,.68);
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.10);
+  margin-top: 28px;
+}
