@@ -1,61 +1,111 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carolina Coelho Advocacia</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonte elegante (serifada premium) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
-  <header class="topo">
-    <img 
-      <img src="./assets/logo-carolina-coelho-advocacia.png" />
-      alt="Carolina Coelho Advocacia"
-      class="logo"
-    />
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- ✅ Ajuste o caminho se sua logo estiver em outra pasta -->
+        <img
+          class="brand-logo"
+          src="assets/logo-carolina-coelho-advocacia.png"
+          alt="Carolina Coelho Advocacia"
+        />
+      </a>
+    </div>
   </header>
 
-  <main class="conteudo">
+  <main class="site-main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Áreas de Atuação</h1>
+        <p class="hero-subtitle">
+          Atendimento mediante agendamento • Atuação nacional (online) e presencial (quando aplicável)
+        </p>
 
-    <h1>
-      Advocacia em Direito Civil, Família<br />
-      e Fundiário / Imobiliário
-    </h1>
+        <div class="cards-grid">
+          <article class="card">
+            <h2 class="card-title">Direito de Família</h2>
+            <ul class="card-list">
+              <li>Divórcio</li>
+              <li>Guarda</li>
+              <li>Alimentos (pensão)</li>
+              <li>Partilha</li>
+              <li>Inventário</li>
+            </ul>
+          </article>
 
-    <a 
-      href="https://wa.me/5561982857752" 
-      class="botao-whatsapp"
-      target="_blank"
-    >
-      Conversar no WhatsApp
-    </a>
+          <article class="card">
+            <h2 class="card-title">Direito Civil</h2>
+            <ul class="card-list">
+              <li>Contratos</li>
+              <li>Cobrança</li>
+              <li>Busca e apreensão</li>
+              <li>Desbloqueio de conta</li>
+              <li>Indenização por danos morais</li>
+            </ul>
+          </article>
 
-    <section class="areas">
-      <h2>Áreas de Atuação</h2>
+          <article class="card">
+            <h2 class="card-title">Direito Imobiliário e Fundiário</h2>
+            <ul class="card-list">
+              <li>Posse</li>
+              <li>Regularização</li>
+              <li>Cessão de direitos</li>
+              <li>Atuação administrativa junto à TERRACAP</li>
+              <li>SEDET, SEDUH, CODHAB e órgãos correlatos</li>
+            </ul>
+          </article>
 
-      <ul>
-        <li><strong>Família:</strong> divórcio, guarda, alimentos, partilha.</li>
-        <li><strong>Civil:</strong> contratos, cobranças, indenizações.</li>
-        <li><strong>Imobiliário:</strong> posse, regularização, cessão de direitos.</li>
-        <li><strong>Previdenciário:</strong> benefícios e revisões junto ao INSS.</li>
-      </ul>
+          <article class="card">
+            <h2 class="card-title">Direito Previdenciário</h2>
+            <ul class="card-list">
+              <li>Benefícios</li>
+              <li>Revisões</li>
+              <li>Requerimentos no INSS</li>
+              <li>Recursos administrativos</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="cta-wrap">
+          <a
+            class="cta-button"
+            href="https://wa.me/556130468238?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Entrar em contato pelo WhatsApp
+          </a>
+          <p class="cta-note">Clique para abrir o WhatsApp.</p>
+        </div>
+
+      </div>
     </section>
-
   </main>
 
-  <footer class="rodape">
-    <p>
-      Carolina Coelho Sociedade Individual de Advocacia<br />
-      CNPJ: 46.536.814/0001-46<br />
-      OAB/DF nº 38.861
-    </p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-line">
+        <span class="footer-strong">CAROLINA COELHO SOCIEDADE INDIVIDUAL DE ADVOCACIA</span>
+      </p>
+      <p class="footer-line">
+        CNPJ: <span class="footer-muted">46.536.814/0001-46</span> • Registro Conselho Seccional: <span class="footer-muted">OAB/DF 694122</span>
+      </p>
+    </div>
   </footer>
-
 </body>
 </html>
-
