@@ -1,132 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carolina Coelho Advocacia</title>
 
-html, body {
-  height: 100%;
-}
+  <link rel="stylesheet" href="styles.css" />
 
-body {
-  background: #000;
-  color: #f5f5f5;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.65;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
 
-/* TOPO */
-.topo {
-  text-align: center;
-  padding: 60px 20px 20px;
-}
+<body>
 
-.logo {
-  max-width: 520px; /* logo grande */
-  width: 92%;
-  margin: 0 auto 22px;
-  display: block;
-}
+  <header class="topo">
+    <img 
+      src="assets/logo-carolina-coelho-advocacia.png" 
+      alt="Carolina Coelho Advocacia"
+      class="logo"
+    />
+  </header>
 
-.subinfo {
-  font-size: 1.05rem;
-  color: #cfcfcf;
-  max-width: 900px;
-  margin: 0 auto;
-}
+  <main class="conteudo">
 
-/* CONTEÚDO */
-.conteudo {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 34px 20px 10px;
-}
+    <h1>
+      Advocacia em Direito Civil, Família<br />
+      e Fundiário / Imobiliário
+    </h1>
 
-.bloco {
-  margin-bottom: 44px;
-  text-align: center;
-}
+    <a 
+      href="https://wa.me/5561982857752" 
+      class="botao-whatsapp"
+      target="_blank"
+    >
+      Conversar no WhatsApp
+    </a>
 
-.bloco-hero h1 {
-  margin-bottom: 18px;
-}
+    <section class="areas">
+      <h2>Áreas de Atuação</h2>
 
-.bloco-hero p {
-  max-width: 860px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  color: #e7e7e7;
-}
+      <ul>
+        <li><strong>Família:</strong> divórcio, guarda, alimentos, partilha.</li>
+        <li><strong>Civil:</strong> contratos, cobranças, indenizações.</li>
+        <li><strong>Imobiliário:</strong> posse, regularização, cessão de direitos.</li>
+        <li><strong>Previdenciário:</strong> benefícios e revisões junto ao INSS.</li>
+      </ul>
+    </section>
 
-/* TÍTULOS */
-h1, h2 {
-  font-family: 'Cinzel', serif;
-  color: #d4af37; /* dourado */
-  letter-spacing: 0.3px;
-}
+  </main>
 
-h1 { font-size: 2.1rem; }
-h2 { font-size: 1.65rem; margin-bottom: 18px; }
+  <footer class="rodape">
+    <p>
+      Carolina Coelho Sociedade Individual de Advocacia<br />
+      CNPJ: 46.536.814/0001-46<br />
+      OAB/DF nº 38.861
+    </p>
+  </footer>
 
-/* ✅ WHATSAPP NO MEIO */
-.cta-meio {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0 40px;
-}
-
-.botao-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #25d366;   /* verde WhatsApp */
-  color: #000;
-  padding: 15px 30px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.05rem;
-  min-width: 260px;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.botao-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.32);
-}
-
-/* LISTA ATUAÇÃO */
-.lista-atuacao {
-  list-style: none;
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 22px 24px;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px;
-  background: rgba(255,255,255,0.03);
-}
-
-.lista-atuacao li {
-  margin-bottom: 14px;
-  font-size: 1.02rem;
-  color: #f0f0f0;
-}
-
-.lista-atuacao li:last-child {
-  margin-bottom: 0;
-}
-
-.lista-atuacao strong {
-  color: #ffffff;
-}
-
-/* RODAPÉ LIMPO */
-.rodape {
-  text-align: center;
-  padding: 42px 20px 46px;
-  font-size: 0.95rem;
-  color: #aaa;
-  border-top: 1px solid rgba(255,255,255,0.10);
-  margin-top: 26px;
-}
+</body>
+</html>
