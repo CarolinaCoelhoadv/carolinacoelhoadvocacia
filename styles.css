@@ -48,21 +48,21 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding: 14px 0;
+  padding: 16px 0; /* leve aumento pra acompanhar a logo maior */
 }
 
-/* ✅ Controle de tamanho da logo (não empurra o texto) */
+/* ✅ LOGO MAIS IMPONENTE (ajuste aqui se quiser + ou -) */
 .brand-logo{
   display:block;
-  width: min(240px, 70vw);
+  width: min(340px, 82vw); /* antes era ~240px */
   height: auto;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,0.50));
 }
 
-/* Mobile: logo menor */
+/* Mobile: logo maior, mas controlada */
 @media (max-width: 480px){
   .brand-logo{
-    width: min(190px, 76vw);
+    width: min(240px, 84vw); /* antes era ~190px */
   }
 }
 
