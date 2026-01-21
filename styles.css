@@ -1,83 +1,197 @@
-:root {
-  --preto-fundo: #0B0B0B;
-  --dourado-principal: #C9A24D;
-  --dourado-claro: #E6C77A;
-  --branco: #FFFFFF;
-  --cinza-suave: #CFCFCF;
+/* styles.css */
+:root{
+  --bg: #070707;
+  --panel: rgba(255,255,255,0.03);
+  --panel-border: rgba(255,255,255,0.12);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+
+  /* Dourado premium */
+  --gold-1: #d9b25f;
+  --gold-2: #b88a2a;
+  --gold-3: #f3e3b2;
+
+  /* WhatsApp (verde oficial) */
+  --whats: #25D366;
+
+  --shadow: 0 14px 40px rgba(0,0,0,0.55);
+  --radius: 16px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{ box-sizing: border-box; }
+html, body{ height:100%; }
+
+body{
+  margin:0;
+  background: radial-gradient(1200px 520px at 55% 0%, rgba(217,178,95,0.10), transparent 55%),
+              radial-gradient(900px 420px at 20% 20%, rgba(255,255,255,0.06), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-body {
-  background-color: var(--preto-fundo);
-  color: var(--branco);
-  font-family: 'Inter', sans-serif;
-  text-align: center;
-}
-
-/* TOPO */
-.topo {
-  padding: 60px 20px 40px;
-}
-
-.logo {
-  max-width: 420px;
-  width: 100%;
-}
-
-/* CONTEÚDO */
-.conteudo {
-  padding: 40px 20px;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  color: var(--dourado-principal);
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-/* BOTÃO WHATSAPP (MEIO DA PÁGINA) */
-.botao-whatsapp {
-  display: inline-block;
-  background-color: #25D366;
-  color: #000;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 500;
-  text-decoration: none;
-  margin-bottom: 60px;
-}
-
-/* ÁREAS */
-.areas h2 {
-  font-family: 'Playfair Display', serif;
-  color: var(--dourado-principal);
-  margin-bottom: 20px;
-}
-
-.areas ul {
-  list-style: none;
-  max-width: 700px;
+.container{
+  width: min(1100px, calc(100% - 48px));
   margin: 0 auto;
 }
 
-.areas li {
-  color: var(--cinza-suave);
-  margin-bottom: 12px;
-  font-size: 0.95rem;
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background: rgba(7,7,7,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* RODAPÉ LIMPO */
-.rodape {
-  border-top: 1px solid #222;
-  padding: 30px 20px;
-  margin-top: 60px;
-  font-size: 0.85rem;
-  color: var(--cinza-suave);
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 0;
+}
+
+/* ✅ Controle de tamanho da logo (não empurra o texto) */
+.brand-logo{
+  display:block;
+  width: min(240px, 70vw);
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
+}
+
+/* Mobile: logo menor */
+@media (max-width: 480px){
+  .brand-logo{
+    width: min(190px, 76vw);
+  }
+}
+
+.site-main{
+  padding: 34px 0 44px;
+}
+
+.hero-inner{
+  text-align: center;
+  padding: 18px 0 10px;
+}
+
+.hero-title{
+  margin: 0 0 8px 0;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: clamp(26px, 2.6vw, 38px);
+  color: var(--gold-3);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.hero-subtitle{
+  margin: 0 auto 26px auto;
+  max-width: 900px;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+/* Responsivo: 1 coluna no mobile */
+@media (max-width: 860px){
+  .cards-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.card-title{
+  margin: 0 0 10px 0;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 18px;
+  color: var(--gold-1);
+}
+
+.card-list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.88);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.card-list li{
+  margin: 6px 0;
+}
+
+.cta-wrap{
+  margin-top: 26px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #07120b;
+  background: linear-gradient(180deg, #3af08a, var(--whats));
+  box-shadow: 0 14px 34px rgba(37,211,102,0.25);
+  border: 1px solid rgba(255,255,255,0.20);
+  transition: transform .12s ease, filter .12s ease;
+}
+
+.cta-button:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.cta-note{
+  margin: 0;
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+}
+
+.site-footer{
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(7,7,7,0.75);
+  padding: 18px 0;
+}
+
+.footer-inner{
+  text-align:center;
+}
+
+.footer-line{
+  margin: 6px 0;
+  color: rgba(255,255,255,0.76);
+  font-size: 13px;
+}
+
+.footer-strong{
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+}
+
+.footer-muted{
+  color: rgba(255,255,255,0.88);
 }
