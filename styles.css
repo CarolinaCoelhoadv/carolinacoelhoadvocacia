@@ -257,4 +257,20 @@ body{
   }
   .whatsapp-text{ font-size: 13px; }
 }
+/* Animação sutil para chamar atenção no WhatsApp */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-top {
+  animation: pulse 3s ease-out infinite;
+}
 
