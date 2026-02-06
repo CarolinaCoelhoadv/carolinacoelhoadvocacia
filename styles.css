@@ -195,3 +195,66 @@ body{
 .footer-muted{
   color: rgba(255,255,255,0.88);
 }
+/* WhatsApp fixo (não interfere no header/logo) */
+.whatsapp-top{
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+
+.whatsapp-top:visited{
+  color: #ffffff !important;
+}
+
+.whatsapp-top:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.26);
+  opacity: .98;
+}
+
+.whatsapp-icon{
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,.18);
+  border-radius: 999px;
+
+  color: #ffffff; /* faz o SVG ficar branco */
+}
+
+.whatsapp-text{
+  font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Mobile: compacta */
+@media (max-width: 520px){
+  .whatsapp-top{
+    top: 12px;
+    right: 12px;
+    padding: 10px 12px;
+  }
+  .whatsapp-text{ font-size: 13px; }
+}
+
