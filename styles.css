@@ -198,8 +198,8 @@ body{
 /* WhatsApp fixo (não interfere no header/logo) */
 .whatsapp-top{
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 24px;
+  right: 24px;
   z-index: 9999;
 
   display: inline-flex;
